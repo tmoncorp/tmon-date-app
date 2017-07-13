@@ -99,11 +99,11 @@ export class AppModule { }
 ## Screenshots
 
 ### Main UI
-![Screenshot](https://github.com/bakytnur/ng2-tmon-date-time/blob/master/main_ui.png?raw=true)
+![Screenshot](https://github.com/bakytnur/tmon-date-app/blob/master/main_ui.png?raw=true)
 ### Time picker dialog
-![Screenshot](https://github.com/bakytnur/ng2-tmon-date-time/blob/master/time_picker.png?raw=true)
+![Screenshot](https://github.com/bakytnur/tmon-date-app/blob/master/time_picker.png?raw=true)
 ### Date picker dialog
-![Screenshot](https://github.com/bakytnur/ng2-tmon-date-time/blob/master/date_picker.png?raw=true)
+![Screenshot](https://github.com/bakytnur/tmon-date-app/blob/master/date_picker.png?raw=true)
 
 ## License
 
