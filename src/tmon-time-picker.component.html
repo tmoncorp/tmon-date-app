@@ -1,0 +1,51 @@
+<div class="container">
+<div class="input-group">
+	<span class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span>
+	<input id="pickerTime" type="text" placeholder="HH:mm:ss" [(ngModel)]="pickerTime" name="pickerTime"
+				#name="ngModel"
+	class="form-control" data-toggle="modal" data-target="#timeModalDlg" style="width: 300px;"/>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="timeModalDlg">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Choose time</h4>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+			<div class="col-sm-3">
+					&nbsp;&nbsp;&nbsp;<div class="glyphicon glyphicon-chevron-up centered" (click)="changeHour(1)"></div>
+					<input id="hour" type="text" [(ngModel)]="hour" name="hour"
+						#name="ngModel"
+					placeholder="00" class="form-control" style="width:45px;"
+					onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="2" (change)="checkValidity()">
+					&nbsp;&nbsp;&nbsp;<div class="glyphicon glyphicon-chevron-down" align="center" (click)="changeHour(-1)"></div>
+			</div>	
+			
+			<div class="col-sm-3">
+				&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-chevron-up" align="center" (click)="changeMinute(1)"></span>
+				<input id="minute" type="text" [(ngModel)]="minute" name="minute"
+					#name="ngModel" placeholder="00" class="form-control" style="width:45px;"
+				onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="2" (change)="checkValidity()">
+				&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-chevron-down" (click)="changeMinute(-1)"></span>
+			</div>	
+			
+			<div class="col-sm-3">
+				&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-chevron-up" align="center" (click)="changeSecond(1)"></span>
+				<input id="second" type="text"  [(ngModel)]="second" name="second"
+					#name="ngModel" placeholder="00" class="form-control" style="width:45px;"
+				onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="2" (change)="checkValidity()">
+				&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-chevron-down" align="center" (click)="changeSecond(-1)"></span>
+			</div>
+		  </div>
+        <div class="modal-footer">
+		  		<button type="button" class="btn btn-default" (click)="getCurrentTime()">Current time</button>
+          <button type="button" class="btn btn-success" data-dismiss="modal" (click)="setPickerTime()">Okay</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

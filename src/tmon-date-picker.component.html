@@ -1,0 +1,59 @@
+<div class="container">
+<div class="input-group">
+	<span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+	<input id="pickerDate" type="text" placeholder="YYYY-MM-DD" [(ngModel)]="pickerDate" name="pickerDate"
+				#name="ngModel" (change)="onPickerYearChange()"
+	class="form-control" data-toggle="modal" data-target="#dateModalDlg" style="width: 300px;"/>
+    <span class="glyphicon glyphicon-remove form-control-feedback" *ngIf="!validDate"></span>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="dateModalDlg">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-body">
+        <div class="row">
+          &nbsp;&nbsp;&nbsp;<div class="glyphicon glyphicon-chevron-left" (click)="prevMonth()"></div>
+          &nbsp;&nbsp;&nbsp;
+          <select id="year" style="width:80px;" [(ngModel)]="year" name="year"
+						#name="ngModel" (change)="onYearChange($event)">
+            <option *ngFor="let y of years" [value]="y">
+                    {{y}}
+                </option>
+          </select> &nbsp;&nbsp;/
+          &nbsp;&nbsp;
+          <select id="month" style="width:80px;" [(ngModel)]="month" name="month"
+						#name="ngModel" (change)="onMonthChange($event)">
+            <option *ngFor="let m of months" [value]="m">
+                    {{m}}
+                </option>
+          </select>
+          &nbsp;&nbsp;&nbsp;
+          <div class="glyphicon glyphicon-chevron-right" align="right" (click)="nextMonth()"></div>
+          </div>
+          <br/>
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>Su</th>
+                    <th>Mo</th>
+                    <th>Tu</th>
+                    <th>We</th>
+                    <th>Th</th>
+                    <th>Fr</th>
+                    <th>Sa</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let pickerDay of days">
+                    <td *ngFor="let dayOfWeek of pickerDay">
+                        <span *ngIf="dayOfWeek > 0" data-dismiss="modal"><a href="#" (click)="pickThisDate(dayOfWeek)">{{dayOfWeek}}</a></span>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+          
+      </div>
+    </div>
+</div>
+</div>
+</div>
