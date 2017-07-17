@@ -8,8 +8,3 @@ Thumbs.db
 # Ignored files
 !*.ts
 *.d.ts
-
-tsconfig.json
-tsconfig-build.json
-.npmignore
-.gitignore

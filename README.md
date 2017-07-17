@@ -68,30 +68,30 @@ export class AppModule { }
 
 5. Declare the variables and callbacks in form's component file.
  ```js
-  date: string;
-  time: string;
+  pickerTime: string;
+  pickerTime: string;
 
   constructor(private el: ElementRef) { 
       let currentDate : Date;
       currentDate = new Date();
-      this.time = "00:00:00";
-      this.date = "2017-07-14";
+      this.pickerTime = "00:00:00";
+      this.pickerTime = "2017-07-14";
   }
 
   onDateSelected(pickerDate: string) {
-    this.date = pickerDate;
+    this.pickerDate = pickerDate;
   }
 
   onTimeSelected(pickerTime: string) {
-		this.time = pickerTime;
+	  this.pickerTime = pickerTime;
   }
  ```
 
 6. Add the following lines to your form html code.
 ```html
 <div class="container">
-	<tmon-time-picker [pickerTime]="time" (onTimeSelected)="onTimeSelected($event)"></tmon-time-picker>
-	<tmon-date-picker [pickerDate]="date" (onDateSelected)="onDateSelected($event)"></tmon-date-picker>
+	<tmon-time-picker [pickerTime]="pickerTime" (onTimeSelected)="onTimeSelected($event)"></tmon-time-picker>
+	<tmon-date-picker [pickerDate]="pickerDate" (onDateSelected)="onDateSelected($event)"></tmon-date-picker>
 </div>
 ```
   

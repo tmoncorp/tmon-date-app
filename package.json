@@ -1,6 +1,6 @@
 {
   "name": "ng2-tmon-date-time-picker",
-  "version": "1.0.4",
+  "version": "1.0.7",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
