@@ -1,8 +1,12 @@
 	<br/>
 		<br/>
 <div class="container">
-	<tmon-time-picker [pickerTime]="time" (onTimeSelected)="onTimeSelected($event)"></tmon-time-picker>
+	<tmon-time-picker [pickerTime]="pickerTime" (onTimeSelected)="onTimeSelected($event)"></tmon-time-picker>
 	<br/>
-	<tmon-date-picker [pickerDate]="date" (onDateSelected)="onDateSelected($event)"></tmon-date-picker>
+	<tmon-date-picker [pickerDate]="pickerDate" (onDateSelected)="onDateSelected($event)"></tmon-date-picker>
+
+	<!--<input type="button" class="btn btn-success" (click)="print()" value="Print"/>-->
 </div>
+
+
 	

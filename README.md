@@ -1,14 +1,13 @@
 # Angular 2 Date/Time Picker from TMON
 Angular date time picker - Angular reusable UI component. This package supports Angular 4.
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
 
 ## Updates
 
 ## Description
 
-Date/time picker dialogs developed by Angular2 based on boostrap 3.
+Date/time picker dialogs developed by Angular2 based on bootstrap 3.3.7 framework.
 
-## Installation
+## Usage
 
 1. Add bootstap dependency
     ```html
@@ -105,11 +104,16 @@ export class AppModule { }
 ### Date picker dialog
 ![Screenshot](https://github.com/bakytnur/tmon-date-app/blob/master/date_picker.png?raw=true)
 
+## Source & Download
+Full source can be found at : https://github.com/bakytnur/tmon-date-app
+
+Download the library from: https://www.npmjs.com/package/ng2-tmon-date-time-picker
+
 ## License
 
 The MIT License
 
-Copyright (c) 2013- TMON <bbakitnur@tmon.co.kr> (https://tmon.co.kr)
+Copyright (c) © 2017 Bakhatnur Baityeli (TMON)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -128,8 +132,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
-
-		
-##  Author
-
-Author: Bakhatnur Baityeli

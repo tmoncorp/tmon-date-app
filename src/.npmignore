@@ -1,5 +1,6 @@
 # Node generated files
 node_modules
+e2e
 npm-debug.log
 # OS generated files
 Thumbs.db
@@ -7,3 +8,8 @@ Thumbs.db
 # Ignored files
 !*.ts
 *.d.ts
+
+tsconfig.json
+tsconfig-build.json
+.npmignore
+.gitignore

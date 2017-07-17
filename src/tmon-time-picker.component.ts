@@ -1,21 +1,18 @@
-import { Component, ElementRef, HostListener, Input } from '@angular/core';
-import { Injectable } from '@angular/core';
-import { Output, EventEmitter} from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'tmon-time-picker',
   templateUrl: './tmon-time-picker.component.html'
 })
 
-@Injectable()
 export class TmonTimePickerComponent{
+	hour: string;
+  	minute: string;
+  	second: string;
 	@Input('pickerTime') pickerTime: string;
-  	@Input('hour') hour: string;
-  	@Input('minute') minute: string;
-  	@Input('second') second: string;
-	@Output() onTimeSelected = new EventEmitter<string>();
+  	@Output() onTimeSelected = new EventEmitter<string>();
 	
-	constructor(private el: ElementRef) { 
+	constructor() { 
 		this.hour = '00';
 		this.minute = '00';
 		this.second = '00';

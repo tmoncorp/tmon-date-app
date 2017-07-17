@@ -1,4 +1,4 @@
-import { Component, Input, Output, ElementRef } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,25 +7,25 @@ import { Component, Input, Output, ElementRef } from '@angular/core';
 })
 export class AppComponent {
   title = 'app works!';
-  date: string;
-  time: string;
+  pickerDate: string;
+  pickerTime: string;
 
-  constructor(private el: ElementRef) { 
+  constructor() { 
       let currentDate : Date;
       currentDate = new Date();
-      this.time = "00:00:00";
-      this.date = "2017-07-14";
+      this.pickerTime = "00:00:00";
+      this.pickerDate = "2017-07-14";
   }
 
 	onDateSelected(pickerDate: string) {
-    this.date = pickerDate;
+    this.pickerDate = pickerDate;
 	}
 
   onTimeSelected(pickerTime: string) {
-		this.time = pickerTime;
+		this.pickerTime = pickerTime;
 	}
 
-  checkState() {
-    console.log(this.date + " " + this.time);
+  print() {
+    console.log(this.pickerDate + " " + this.pickerTime);
   }
 }

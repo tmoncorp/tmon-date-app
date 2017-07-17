@@ -1,13 +1,10 @@
-import { Component, ElementRef, HostListener, Input } from '@angular/core';
-import { Injectable } from '@angular/core';
-import { Output, EventEmitter} from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'tmon-date-picker',
   templateUrl: './tmon-date-picker.component.html'
 })
 
-@Injectable()
 export class TmonDatePickerComponent{
     years: number[] = [];
     months: number[] = [];
@@ -24,7 +21,7 @@ export class TmonDatePickerComponent{
     @Input('pickerDate') pickerDate: string;
     @Output() onDateSelected = new EventEmitter<string>();
 
-    constructor(private el: ElementRef) { 
+    constructor() { 
         let currentDate : Date;
 		currentDate = new Date();
         this.year = currentDate.getFullYear();
