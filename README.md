@@ -23,7 +23,7 @@ Date/time picker dialogs developed by Angular2 based on bootstrap 3.3.7 framewor
     ```
 3. 	Import TmonTimePickerComponent for TimePicker
 ```js
-import { TmonTimePickerComponent } from 'ng2-tmon-date-time-picker/ng2-tmon-date-time-picker'; 
+import { TmonTimePickerComponent } from 'ng2-tmon-date-time-picker/ng2-tmon-date-time-picker';
 
 @NgModule({
   declarations: [
@@ -42,7 +42,7 @@ import { TmonTimePickerComponent } from 'ng2-tmon-date-time-picker/ng2-tmon-date
 })
 export class AppModule { }
 
- ``` 
+ ```
 
 4. Import TmonTimePickerComponent for DatePicker
 ```js
@@ -71,7 +71,7 @@ export class AppModule { }
   pickerTime: string;
   pickerTime: string;
 
-  constructor(private el: ElementRef) { 
+  constructor(private el: ElementRef) {
       let currentDate : Date;
       currentDate = new Date();
       this.pickerTime = "00:00:00";
@@ -94,26 +94,29 @@ export class AppModule { }
 	<tmon-date-picker [pickerDate]="pickerDate" (onDateSelected)="onDateSelected($event)"></tmon-date-picker>
 </div>
 ```
-  
+
 ## Screenshots
 
 ### Main UI
-![Screenshot](https://github.com/bakytnur/tmon-date-app/blob/master/main_ui.png?raw=true)
+![Screenshot](https://github.com/tmoncorp/tmon-date-app/blob/master/main_ui.png?raw=true)
 ### Time picker dialog
-![Screenshot](https://github.com/bakytnur/tmon-date-app/blob/master/time_picker.png?raw=true)
+![Screenshot](https://github.com/tmoncorp/tmon-date-app/blob/master/time_picker.png?raw=true)
 ### Date picker dialog
-![Screenshot](https://github.com/bakytnur/tmon-date-app/blob/master/date_picker.png?raw=true)
+![Screenshot](https://github.com/tmoncorp/tmon-date-app/blob/master/date_picker.png?raw=true)
 
 ## Source & Download
-Full source can be found at : https://github.com/bakytnur/tmon-date-app
+Full source can be found at : https://github.com/tmoncorp/tmon-date-app
 
 Download the library from: https://www.npmjs.com/package/ng2-tmon-date-time-picker
+
+## Developer
+Bakhatnur Baityeli
 
 ## License
 
 The MIT License
 
-Copyright (c) © 2017 Bakhatnur Baityeli (TMON)
+Copyright (c) © 2017 TMON Inc.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
