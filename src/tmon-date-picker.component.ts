@@ -1,4 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Month } from './month';
 
 @Component({
   selector: 'tmon-date-picker',
@@ -7,8 +8,9 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 export class TmonDatePickerComponent{
     years: number[] = [];
-    months: number[] = [];
+    months: Month[] = [];
     monthsWith30: number[] = [4, 6, 9, 11];
+    monthNames : string[] = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     days: number[][];
     baseYear: number = 2007;
     yearsToBuild: number = 30;
@@ -121,7 +123,7 @@ export class TmonDatePickerComponent{
         }
 
         for (var i=0; i<12; i++) {
-            this.months[i] = i + 1;
+            this.months[i] = new Month(i + 1, this.monthNames[i]);
         }
 
         this.buildCalendar(this.year, this.month);

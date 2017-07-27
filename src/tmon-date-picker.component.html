@@ -23,8 +23,8 @@
           &nbsp;&nbsp;
           <select id="month" style="width:80px;" [(ngModel)]="month" name="month"
 						#name="ngModel" (change)="onMonthChange($event)">
-            <option *ngFor="let m of months" [value]="m">
-                    {{m}}
+           <option *ngFor="let m of months" [value]="m.value">
+                    {{m.name}}
                 </option>
           </select>
           &nbsp;&nbsp;&nbsp;

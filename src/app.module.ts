@@ -10,7 +10,7 @@ import { AppComponent } from './app.component';
 @NgModule({
   declarations: [
     AppComponent,
-	  TmonTimePickerComponent,
+    TmonTimePickerComponent,
     TmonDatePickerComponent,
   ],
   imports: [
